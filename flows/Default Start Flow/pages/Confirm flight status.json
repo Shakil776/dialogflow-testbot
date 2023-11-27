@@ -1,0 +1,41 @@
+{
+  "name": "35d181c9-d9a0-4022-bf5a-b31bd65a37c7",
+  "displayName": "Confirm flight status",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Looking up your flight reference $session.params.pnr_num, we are pleased to confirm that your flight is on time and will depart LAX at 10am for NYC.  Please arrive at least 1.5 hours before departure.\n\nWould you like to make any changes to your flight?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "confirmation.yes",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Our agents will be in touch soon for your request to amend your scheduled flight." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Thank You",
+    "name": "69c63e8c-5245-4671-acfc-156202bd08b3"
+  }, {
+    "intent": "confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Great, we look forward to having you fly with us soon." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Thank You",
+    "name": "67cdb135-dfb3-4de0-b6d7-9bc836a6e4e7"
+  } ],
+  "transitionRouteGroups": [ "Survey" ]
+}

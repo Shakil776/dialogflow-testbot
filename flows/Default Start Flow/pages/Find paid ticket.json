@@ -1,0 +1,114 @@
+{
+  "name": "87404f37-5c1f-4d73-b32f-c317ae12e571",
+  "displayName": "Find paid ticket",
+  "form": {
+    "parameters": [ {
+      "displayName": "confirmation_number",
+      "required": true,
+      "entityType": "@sys.number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "What is your flight confirmation number?" ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn't get that. Please enter or say your ticket confirmation number." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "38a13fbc-6324-4fe3-8b1a-e805b4f5e5d4"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "In order to look up your flight information, we would need your ticket confirmation number. Please say or enter the confirmation number." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "b7bb6bf7-f159-4320-82e3-056f1428d4c8"
+        }, {
+          "targetPage": "Agent handoff",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "You have not provided a confirmation number yet. Let me transfer you to a live agent to further assist you." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "a7dc9d33-b031-4d74-a437-1ef1c58a012d"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn't get that. Can you rephrase that?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "4e50d0d9-b6ef-4874-b4be-7ae1a5437de9"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I'm still having trouble. Can you try again?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "2d3cacdf-ce8e-49d7-90ee-55057de68eaf"
+        }, {
+          "targetPage": "Agent handoff",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Let me transfer you to someone else who can help." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "d7eace8a-b680-4129-922e-876b817623cb"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 5,
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thank you for the confirmation number." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "\u003cspeak\u003e\u003cprosody rate=\"slow\"\u003eHere is your flight information: \u003cbreak time = \"1s\"/\u003e You have round trip ticket reservation departure from Dhaka on September 1st, 2023 to Mumbai and return trip flying form Mumbai on September 5th, 2023.\u003c/prosody\u003e\u003c/speak\u003e" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "378806d3-0e58-4919-9c74-0482a0c703ef"
+  } ]
+}

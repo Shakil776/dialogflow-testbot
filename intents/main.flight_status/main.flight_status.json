@@ -1,0 +1,10 @@
+{
+  "name": "0e1f80d2-b89f-4806-afbf-260b18907711",
+  "displayName": "main.flight_status",
+  "parameters": [ {
+    "id": "PNR_Number",
+    "entityType": "@PNR_Number"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 6
+}

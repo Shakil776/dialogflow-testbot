@@ -1,0 +1,19 @@
+{
+  "name": "d8a89891-1dac-47b9-ae51-2e2b45b62c7c",
+  "displayName": "Agent handoff",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "liveAgentHandoff": {
+        "metadata": {
+          "userStatus": {
+            "requestedLiveAgent": true
+          }
+        }
+      },
+      "languageCode": "en"
+    } ]
+  }
+}
