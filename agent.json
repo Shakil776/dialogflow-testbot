@@ -8,6 +8,7 @@
   },
   "startFlow": "Default Start Flow",
   "enableStackdriverLogging": true,
+  "enableSpellCorrection": true,
   "advancedSettings": {
     "enabled": true,
     "audioExportGcsDestination": {

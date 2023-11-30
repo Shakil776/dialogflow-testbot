@@ -7,7 +7,7 @@
   "entryFulfillment": {
     "messages": [ {
       "text": {
-        "text": [ "This is to confirm that $session.params.passenger_name will fly\nFrom: $session.params.departure_country, $session.params.departure_city\nTo: $session.params.destination_country,  $session.params.destination_city\nContact Number: $session.params.passenger_contact_number\nLeaving on: $session.params.departure_date\nReturning on: $session.params.return_date\n\nIs this information correct?" ]
+        "text": [ "This is to confirm that $session.params.passenger_name will fly From: $session.params.departure_city To: $session.params.destination_city Leaving on: $session.params.departure_date Returning on: $session.params.return_date Is this information correct?" ]
       },
       "languageCode": "en"
     }, {
