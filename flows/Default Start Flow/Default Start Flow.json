@@ -34,6 +34,17 @@
     },
     "targetPage": "Check flight status",
     "name": "ad5838dc-f9cf-47d7-b008-720b7c2e341b"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Github testing....." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "f4126f8e-1c9c-4716-83b2-c3d7fb8dea4b"
   } ],
   "eventHandlers": [ {
     "event": "sys.no-match-default",
